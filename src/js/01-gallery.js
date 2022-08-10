@@ -6,6 +6,7 @@ import SimpleLightbox from 'simplelightbox';
 // Додатковий імпорт стилів
 import 'simplelightbox/dist/simple-lightbox.min.css';
 console.log(galleryItems);
+const gallery = document.querySelector('.gallery');
 
 function markupGalleryItems(galleryItems) {
   return galleryItems
