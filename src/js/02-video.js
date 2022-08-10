@@ -2,7 +2,7 @@ import Player from '@vimeo/player';
 const lodash = require('lodash.throttle');
 
 const iframe = document.querySelector('iframe');
-const player = new Vimeo(iframe);
+const player = new Player(iframe);
 
 const onPlay = function (data) {
   const time = data.seconds;
