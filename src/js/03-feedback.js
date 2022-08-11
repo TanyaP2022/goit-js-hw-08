@@ -7,8 +7,9 @@ const STORAGE_KEY = 'feedback-form-state';
 
 const formData = {};
 
-formEl.addEventListener('submit', onFormSubmit);
 formEl.addEventListener('input', throttle(onTextareaInput, 500));
+formEl.addEventListener('submit', onFormSubmit);
+fillForm();
 
 function onTextareaInput(event) {
   formData[event.target.name] = event.target.value;
@@ -23,8 +24,6 @@ function onFormSubmit(event) {
   event.currentTarget.reset();
   localStorage.removeItem(STORAGE_KEY);
 }
-
-fillForm();
 
 function fillForm() {
   const rawValues = localStorage.getItem(STORAGE_KEY);
